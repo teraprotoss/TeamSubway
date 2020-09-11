@@ -62,6 +62,7 @@ public class Customer {
 			System.out.println("VIP등급까지 " + (800-mileage) + "점 남았습니다.");
 		} else {
 			level = "VIP등급";
+			System.out.println(name + "님은 " + level + "입니다.");
 		}
 		
 		
