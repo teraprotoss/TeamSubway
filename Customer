@@ -1,0 +1,69 @@
+package Subway;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Customer {
+
+	//테스트하기위한 main method
+	public static void main(String[] args) {
+		
+		//총구매금액
+		//버거,서브메뉴 수량 누적할 변수
+		int burgerqty = 0;
+		int subqty = 0;
+		
+		burgerqty += 1;
+		subqty += 1;
+		
+		//버거,서브메뉴 총금액 누적할 변수
+		int burgertotal = 0;
+		int subtotal = 0;
+		int total = 0;
+		
+		//버거, 서브가격 누적할 변수
+		burgertotal += 5000;
+		subtotal += 2000;
+		
+		total = burgertotal + subtotal;
+		
+		int mileage = 0;
+		String level;
+		String name = null;
+		
+		System.out.println();
+		Date today = new Date();
+		SimpleDateFormat now = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		
+		System.out.println("[RECEIPT]      "+now.format(today));
+		System.out.println("-----------------------------------");
+		System.out.println("QTY   ITEM        TOTAL");
+		System.out.println(burgerqty + "     Burger      " + burgertotal);
+		System.out.println(subqty + "     Submenu     " + subtotal);
+		System.out.println("-----------------------------------");	
+		System.out.println("총 금액: " + total + "원");
+//		System.out.println("입력한 금액: " + inputmoney + "원");
+//		System.out.println("거스름돈: " + change + "원");
+		System.out.println();
+		
+		mileage += (total*0.1);
+		
+		if (mileage<600) {
+			level = "클래식등급";
+			System.out.println(name + "님은 " + level + "입니다.");
+			System.out.println("라이트등급까지 " + (600-mileage) + "점 남았습니다.");
+		} else if (mileage<700) {
+			level = "라이트등급";
+			System.out.println(name + "님은 " + level + "입니다.");
+			System.out.println(" 프리미엄 등급까지 " + (700-mileage) + "점 남았습니다.");
+		} else if (mileage<800) {
+			level = "프리미엄등급";
+			System.out.println(name + "님은 " + level + "입니다.");
+			System.out.println("VIP등급까지 " + (800-mileage) + "점 남았습니다.");
+		} else {
+			level = "VIP등급";
+		}
+		
+		
+	}
+}
