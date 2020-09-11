@@ -1,0 +1,38 @@
+package Test;
+
+import java.util.Scanner;
+
+public class Kiosk extends SubWay{
+	
+	boolean st = false;
+	
+	sub su = new sub();
+	
+	public void kio() {
+		Scanner sc = new Scanner(System.in);
+		int i;
+		while(!st) {
+			System.out.println("SubWay에 오신것을 환영합니다 , 메뉴를 선택해주세요.");
+			System.out.println("1.샌드위치주문 , 2.회원정보확인");
+			int check = sc.nextInt();
+			if(check == 1) {
+				System.out.println("서브메뉴를 입력해주세요 0:아이스아메리카노 1:소프트콘 2:치즈스틱");
+				i = sc.nextInt();
+				su.info(i);
+				
+			}else if(check == 2) {
+				//Customer();
+			}
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+}
